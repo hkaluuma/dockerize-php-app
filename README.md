@@ -45,4 +45,5 @@ docker network create test
 
 ## to run the image
 docker compose up 
-docker compose up -d # to run the image in the background with out logs showing
+
+docker compose up -d #to run the image in the background with out logs showing
