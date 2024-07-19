@@ -5,11 +5,12 @@ https://www.youtube.com/watch?v=1zWFxri51qQ&t=347s
 ## login as a sudo user
 sudo su
 
-## Install docker.io
+## Install docker.iogit
 apt install docker.io
 
 ## Check if docker is installed and which version
-docker --version or docker to see a bunch of staff
+docker --version : to see the docker version.
+docker to see a bunch of staff
 
 my docker version is 24.0.7 and works with docker compose versions 2.x
 
@@ -34,6 +35,9 @@ Display: Docker Compose version v2.19.1
 ## To clone my project code from GitHub
 https://github.com/hkaluuma/dockerize-php-app.git
 
+## Change Directory to the folder of the project where there is the docker compose.yml file
+cd Dockerize-PHP-Application
+
 ## Build an image in docker
 docker build -t mydemophpimage . # the . is to build the image with in this directory
 
@@ -46,7 +50,20 @@ docker image ls | grep image name #if there are many images and we want to grep 
 ## To create a network
 docker network create test
 
+## To list existing networks to see if the new one is there
+docker network ls
+
 ## To run the image
 docker compose up 
 
 docker compose up -d #to run the image in the background with out logs showing
+
+## Other common commands of docker you may need inlude:
+### to list the containers
+docker ps -a 
+### to remove the docker container
+docker rm 0ea91f8511d4 # where 0ea91f8511d4 is the container id
+### to list the docker images
+docker image list
+### to list the containers
+docker rmi rmi 4a6df810d2c4 # where 4a6df810d2c4 is the image id
